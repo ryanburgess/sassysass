@@ -1,0 +1,24 @@
+{
+  "name": "sassysass",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanburgess/sassysass.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "sassysass"
+  ],
+  "author": "Ryan Burgess @burgessdryan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanburgess/sassysass/issues"
+  },
+  "homepage": "https://github.com/ryanburgess/sassysass#readme"
+}
