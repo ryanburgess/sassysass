@@ -43,11 +43,12 @@ SassySass Architecture
   * Navigation
   * Content Block
 
-5.  Views
+5.  Themes
 
-  The views directory contains Sass partials that overwrite the styles in layout or modules.
+  The themes directory contains Sass partials that overwrite the styles in layout or modules.
 
 ## Release History
+* 1.0.1: Update documentation.
 * 1.0.0: Initial release.
 
 ## Contributing
