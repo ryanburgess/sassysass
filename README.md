@@ -1,6 +1,4 @@
 # SassySass
-=============
-
 [![npm version](https://badge.fury.io/js/sassysass.svg)](http://badge.fury.io/js/sassysass)
 
 Sassy Sass is a CSS architecture scaffolding for Sass.
