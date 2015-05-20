@@ -33,7 +33,7 @@ fs.readFile(path.join(__dirname, '../page.scss'), 'utf8', function (err,data) {
     return console.log(err);
     console.log('Directory path might be wrong');
   }
-  var newFile = data.replace('@import "views/red";', '').replace('@import "modules/header";', '').replace('@import "modules/footer";', '');
+  var newFile = data.replace('@import "themes/red";', '').replace('@import "modules/header";', '').replace('@import "modules/footer";', '');
   write(dir + '/'+ filePath + '/' + name + '.scss', newFile);
 });
 
