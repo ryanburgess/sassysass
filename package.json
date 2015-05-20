@@ -1,8 +1,14 @@
 {
   "name": "sassysass",
-  "version": "0.0.2",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.3",
+  "description": "Sassy Sass is a CSS architecture scaffolding for Sass.",
+  "main": "bin/sassysass",
+  "preferGlobal": true,
+  "bin": {
+    "sassysass": "./bin/sassysass",
+    "sassysass-page": "./bin/sassysass-page",
+    "sassysass-module": "./bin/sassysass-module"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,12 +19,31 @@
   "keywords": [
     "sass",
     "scss",
-    "sassysass"
+    "sassysass",
+    "boilerplate",
+    "scaffolding",
+    "build",
+    "architecture",
+    "smacss",
+    "methodology"
   ],
   "author": "Ryan Burgess @burgessdryan",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ryanburgess/sassysass/issues"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "fs-extra": "^0.16.3",
+    "get-date": "^1.0.0",
+    "mkdirp": "^0.5.0",
+    "path": "^0.11.14"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
   },
   "homepage": "https://github.com/ryanburgess/sassysass#readme"
 }

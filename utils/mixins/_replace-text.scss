@@ -1,0 +1,14 @@
+// ----------------------------------------------------------------------
+
+  // Replace text
+
+// ----------------------------------------------------------------------
+
+// example: @include replace-text();
+
+@mixin replace-text() {
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}

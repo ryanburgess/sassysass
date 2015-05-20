@@ -1,0 +1,23 @@
+%marginAuto {
+  @include margin-auto();
+}
+
+%clearfix {
+  @include clearfix();
+}
+
+%inlineBlock {
+  @include inline-block();
+}
+
+%hideText {
+  @include hide-text();
+}
+
+%left {
+  float: left;
+}
+
+%right {
+  float: right;
+}
