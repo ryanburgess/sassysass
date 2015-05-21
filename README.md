@@ -3,6 +3,8 @@
 
 With a simple command add a well-structured architecture for your project's CSS. Based off the [SMACSS](https://smacss.com/) methodology, SassySass creates a simple, maintainable structure for your Sass files.
 
+![SassySass in the terminal](https://raw.github.com/ryanburgess/sassysass/master/sassysass.gif
+
 ## Install
 
 ```js
@@ -48,6 +50,7 @@ SassySass Architecture
   The themes directory contains Sass partials that overwrite the styles in layout or modules.
 
 ## Release History
+* 1.0.2: Add animated terminal gif to demonstrate SassySass in use.
 * 1.0.1: Update documentation.
 * 1.0.0: Initial release.
 
