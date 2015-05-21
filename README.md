@@ -3,7 +3,7 @@
 
 With a simple command add a well-structured architecture for your project's CSS. Based off the [SMACSS](https://smacss.com/) methodology, SassySass creates a simple, maintainable structure for your Sass files.
 
-![SassySass in the terminal](https://raw.github.com/ryanburgess/sassysass/master/sassysass.gif
+![SassySass in the terminal](https://raw.github.com/ryanburgess/sassysass/master/sassysass.gif)
 
 ## Install
 
