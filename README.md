@@ -1,7 +1,7 @@
 # SassySass
 [![npm version](https://badge.fury.io/js/sassysass.svg)](http://badge.fury.io/js/sassysass)
 
-With a simple command add a well-structured architecture for your project's CSS. Based off the (SMACSS)[https://smacss.com/] methodology, SassySass creates a simple, maintainable structure for your Sass files.
+With a simple command add a well-structured architecture for your project's CSS. Based off the [SMACSS](https://smacss.com/) methodology, SassySass creates a simple, maintainable structure for your Sass files.
 
 ## Install
 
