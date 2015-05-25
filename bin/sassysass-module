@@ -2,6 +2,7 @@
 
 var fs      = require('fs'),
   path      = require('path'),
+  prompt    = require('prompt'),
   pkg       = require('../package.json'),
   version   = pkg.version,
   dir       = path.dirname(),
@@ -10,38 +11,34 @@ var fs      = require('fs'),
   name,
   modulePath;
 
-// get parameters passed through console
-process.argv.forEach(function (val, index, array) {
-  if(val.indexOf('name') > -1){
-    name = val.split('=');
-    name = name[1];
-  }else if(val.indexOf('path') > -1){
-    modulePath = val.split('=');
-    modulePath = modulePath[1];
+prompt.start();
+
+prompt.get(['name', 'modulePath'], function (err, result) {
+  name = result.name;
+  modulePath = result.modulePath;
+  console.log('test ' + result.modulePath);
+  if(name === ''){
+    name = 'module';
   }
-});
 
-if(name === undefined){
-  name = 'module';
-}
-
-if(modulePath === undefined){
-  modulePath = 'sass/modules';
-}
-
-newFile += '// File Name: _' + name + '.scss'+ '\n';
-newFile += '// Description: \n';
-newFile += '// Used by: \n';
-newFile += '// Dependencies: \n';
-newFile += '// Date created: ' + dateTime() + '\n';
-newFile += '// ------------------------------------------------------------ \n';
-
-fs.writeFile(dir + '/'+ modulePath +'/_' + name + '.scss', newFile, function(err) {
-  if(err) {
-    console.log(err);
-    console.log('Directory path might be wrong');
-  }else{
-    console.log('_' + name + '.scss was created');
+  if(modulePath === ''){
+    modulePath = 'sass/modules';
   }
+
+  newFile += '// File Name: _' + name + '.scss'+ '\n';
+  newFile += '// Description: \n';
+  newFile += '// Used by: \n';
+  newFile += '// Dependencies: \n';
+  newFile += '// Date created: ' + dateTime() + '\n';
+  newFile += '// ------------------------------------------------------------ \n';
+
+  fs.writeFile(dir + '/'+ modulePath +'/_' + name + '.scss', newFile, function(err) {
+    if(err) {
+      console.log(err);
+      console.log('Directory path might be wrong');
+    }else{
+      console.log('_' + name + '.scss was created');
+    }
+  });
+  console.log('SassySass module ' + version);
 });
-console.log('SassySass module ' + version);

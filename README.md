@@ -13,9 +13,9 @@ npm install sassysass -g
 ## Use
 Run ```sassysass``` in your project directory.
 
-To create new individual Sass files run ```sassysass-page name=[filename] path=[path to Sass directory]```. If the name isn't set the file will be named 'page' and if the path isn't set it assumes the directory is 'sass'.
+To create new individual Sass files run ```sassysass-page```. If the name isn't set the file will be named 'page' and if the path isn't set it assumes the directory is 'sass'.
 
-To create new Sass module run ```sassysass-module name=[filename] path=[path to modules directory]```. If the name isn't set the file will be named 'module' and if the path isn't set it assumes the directory is 'sass/modules'.
+To create new Sass module run ```sassysass-module```. If the name isn't set the file will be named 'module' and if the path isn't set it assumes the directory is 'sass/modules'.
 
 SassySass Architecture
 ----------
@@ -50,6 +50,7 @@ SassySass Architecture
   The themes directory contains Sass partials that overwrite the styles in layout or modules.
 
 ## Release History
+* 1.0.3: [Issue 3](https://github.com/ryanburgess/sassysass/issues/3) - add prompts for setting up modules and pages.
 * 1.0.2: Add animated terminal gif to demonstrate SassySass in use.
 * 1.0.1: Update documentation.
 * 1.0.0: Initial release.
