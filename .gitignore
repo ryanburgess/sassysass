@@ -6,6 +6,7 @@
 *.log
 <<<<<<< HEAD
 node_modules/
+sass/
 npm-debug.log
 =======
 node_modules/

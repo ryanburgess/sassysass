@@ -11,12 +11,24 @@ var fs      = require('fs'),
   name,
   modulePath;
 
+prompt.message = "SassySass".magenta;
+prompt.delimiter = " ";
+
 prompt.start();
 
-prompt.get(['name', 'modulePath'], function (err, result) {
-  name = result.name;
+prompt.get({
+  properties: {
+    name : {
+      description: "What is the name of the module?"
+    },
+    modulePath : {
+      description: "Path to modules directory?"
+    }
+  }
+  }, function (err, result) {
+  name = result.name.replace(/\s+/g, "-");
   modulePath = result.modulePath;
-  console.log('test ' + result.modulePath);
+  //console.log('test ' + result.modulePath);
   if(name === ''){
     name = 'module';
   }
