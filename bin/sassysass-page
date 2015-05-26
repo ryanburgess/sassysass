@@ -9,10 +9,22 @@ var fs      = require('fs'),
   name,
   filePath;
 
+prompt.message = "SassySass".magenta;
+prompt.delimiter = " ";
+
 prompt.start();
 
-prompt.get(['name', 'filePath'], function (err, result) {
-  name = result.name;
+prompt.get({
+  properties: {
+    name : {
+      description: "What is the name of the page?"
+    },
+    filePath : {
+      description: "Path to page directory?"
+    }
+  }
+  }, function (err, result) {
+  name = result.name.replace(/\s+/g, "-");
   filePath = result.filePath;
   if(name === ''){
     name = 'page';
