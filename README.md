@@ -50,6 +50,7 @@ SassySass Architecture
   The themes directory contains Sass partials that overwrite the styles in layout or modules.
 
 ## Release History
+* 1.0.5: [Issue 1](https://github.com/ryanburgess/sassysass/issues/1) - prevent overwriting files.
 * 1.0.4: [Pull 4](https://github.com/ryanburgess/sassysass/pull/4) - added some "sass" to the prompts.
 * 1.0.3: [Issue 3](https://github.com/ryanburgess/sassysass/issues/3) - add prompts for setting up modules and pages.
 * 1.0.2: Add animated terminal gif to demonstrate SassySass in use.

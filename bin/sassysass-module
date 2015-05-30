@@ -9,6 +9,7 @@ var fs      = require('fs'),
   dateTime  = require('get-date'),
   newFile   = '',
   name,
+  overwrite,
   modulePath;
 
 prompt.message = 'SassySass'.magenta;
@@ -25,7 +26,7 @@ prompt.get({
       description: 'Path to modules directory?'
     }
   }
-  }, function (err, result) {
+}, function (err, result) {
   name = result.name.replace(/\s+/g, '-');
   modulePath = result.modulePath;
   //console.log('test ' + result.modulePath);
@@ -44,13 +45,25 @@ prompt.get({
   newFile += '// Date created: ' + dateTime() + '\n';
   newFile += '// ------------------------------------------------------------ \n';
 
-  fs.writeFile(dir + '/'+ modulePath +'/_' + name + '.scss', newFile, function(err) {
-    if(err) {
-      console.log(err);
-      console.log('Directory path might be wrong');
+  // check if file already exists
+  fs.exists(dir + '/'+ modulePath +'/_' + name + '.scss', function (exists) {
+    if(exists !== true){
+      writeFile();
     }else{
-      console.log('_' + name + '.scss was created');
+      console.log('The module ' + name + ' already exists');
     }
   });
-  console.log('SassySass module ' + version);
+
+  function writeFile(){
+    fs.writeFile(dir + '/'+ modulePath +'/_' + name + '.scss', newFile, function(err) {
+      if(err) {
+        console.log(err);
+        console.log('Directory path might be wrong');
+      }else{
+        console.log('_' + name + '.scss was created');
+      }
+      console.log('SassySass module ' + version);
+    });
+  }
+  
 });
