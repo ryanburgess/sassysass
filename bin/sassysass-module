@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 
-var fs      = require('fs'),
-  path      = require('path'),
-  prompt    = require('prompt'),
-  pkg       = require('../package.json'),
-  version   = pkg.version,
-  dir       = path.dirname(),
-  dateTime  = require('get-date'),
-  newFile   = '',
+var fs        = require('fs'),
+  path        = require('path'),
+  prompt      = require('prompt'),
+  async       = require('async'),
+  pkg         = require('../package.json'),
+  version     = pkg.version,
+  dir         = path.dirname(),
+  dateTime    = require('get-date'),
+  newFile     = '',
+  pageBlock   = '',
+  pages,
   name,
   overwrite,
   modulePath,
@@ -28,13 +31,17 @@ prompt.get({
     },
     moduleDesc : {
       description: 'What is this module used for?'
+    },
+    pages : {
+      description: 'What pages do you want to add this module to?'
     }
   }
 }, function (err, result) {
   name = result.name.replace(/\s+/g, '-');
   modulePath = result.modulePath;
   moduleDesc = result.moduleDesc;
-  //console.log('test ' + result.modulePath);
+  pages = result.pages;
+
   if(name === ''){
     name = 'module';
   }
@@ -43,21 +50,56 @@ prompt.get({
     modulePath = 'sass/modules';
   }
 
-  newFile += '// File Name: _' + name + '.scss'+ '\n';
-  newFile += '// Description: ' + moduleDesc + '\n';
-  newFile += '// Used by: \n';
-  newFile += '// Dependencies: \n';
-  newFile += '// Date created: ' + dateTime() + '\n';
-  newFile += '// ------------------------------------------------------------ \n';
+  if(pages !== ''){
+    pages = pages.split(', ');
 
-  // check if file already exists
-  fs.exists(dir + '/'+ modulePath +'/_' + name + '.scss', function (exists) {
-    if(exists !== true){
-      writeFile();
-    }else{
-      console.log('The module ' + name + ' already exists');
-    }
-  });
+    async.forEach(pages, function (page, callback){ 
+
+      pageBlock += page + '.scss, ';
+
+      fs.exists(dir + '/sass/' + page + '.scss', function (exists) {
+        if(exists === true){
+          fs.readFile(path.join(dir + '/sass/' + page + '.scss'), 'utf8', function (err,data) {
+            if (err) {
+              return console.log(err);
+            }
+            var newModPath = modulePath.replace('sass/', '');
+            var updateFile = data.replace('\n// ----------------------------------------------------------------------\n\t// Themes', '@import "'+ newModPath + '/' + name +'";\n\n// ----------------------------------------------------------------------\n\t// Themes');
+            write(dir + '/sass/' + page + '.scss', updateFile);
+          });
+        }
+      });
+
+      callback();
+    }, function(err) {
+      complete();
+    }); 
+  }else{
+    complete();
+  }
+
+  function write(path, str, mode) {
+    fs.writeFileSync(path, str, { mode: mode || 0666 });
+    console.log('   \x1b[36mupdate\x1b[0m : ' + path);
+  }
+
+  function complete(){
+    newFile += '// File Name: _' + name + '.scss'+ '\n';
+    newFile += '// Description: ' + moduleDesc + '\n';
+    newFile += '// Used by: '+ pageBlock +'\n';
+    newFile += '// Dependencies: \n';
+    newFile += '// Date created: ' + dateTime() + '\n';
+    newFile += '// ------------------------------------------------------------\n';
+
+    // check if file already exists
+    fs.exists(dir + '/'+ modulePath +'/_' + name + '.scss', function (exists) {
+      if(exists !== true){
+        writeFile();
+      }else{
+        console.log('The module ' + name + ' already exists');
+      }
+    });
+  }
 
   function writeFile(){
     fs.writeFile(dir + '/'+ modulePath +'/_' + name + '.scss', newFile, function(err) {

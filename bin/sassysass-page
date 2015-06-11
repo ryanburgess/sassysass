@@ -43,7 +43,7 @@ prompt.get({
   if(modules !== ''){
     modules = modules.split(', ');
     for (var i = 0; i < modules.length; i++){
-      moduleBlock += '@import "modules/'+ modules[i] +'"; \n';
+      moduleBlock += '@import "modules/'+ modules[i] +'";\n';
     }
   }
 

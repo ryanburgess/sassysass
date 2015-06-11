@@ -50,6 +50,7 @@ SassySass Architecture
   The themes directory contains Sass partials that overwrite the styles in layout or modules.
 
 ## Release History
+* 1.0.8: [Issue 2](https://github.com/ryanburgess/sassysass/issues/2) add import reference to root SCSS files when creating a new module.
 * 1.0.7: Add modules to a page when creating the page SCSS file.
 * 1.0.6: add description question for creating a module.
 * 1.0.5: [Issue 1](https://github.com/ryanburgess/sassysass/issues/1) - prevent overwriting files.
