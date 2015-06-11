@@ -10,7 +10,8 @@ var fs      = require('fs'),
   newFile   = '',
   name,
   overwrite,
-  modulePath;
+  modulePath,
+  moduleDesc;
 
 prompt.message = 'SassySass'.magenta;
 prompt.delimiter = ' ';
@@ -24,11 +25,15 @@ prompt.get({
     },
     modulePath : {
       description: 'Path to modules directory?'
+    },
+    moduleDesc : {
+      description: 'What is this module used for?'
     }
   }
 }, function (err, result) {
   name = result.name.replace(/\s+/g, '-');
   modulePath = result.modulePath;
+  moduleDesc = result.moduleDesc;
   //console.log('test ' + result.modulePath);
   if(name === ''){
     name = 'module';
@@ -39,7 +44,7 @@ prompt.get({
   }
 
   newFile += '// File Name: _' + name + '.scss'+ '\n';
-  newFile += '// Description: \n';
+  newFile += '// Description: ' + moduleDesc + '\n';
   newFile += '// Used by: \n';
   newFile += '// Dependencies: \n';
   newFile += '// Date created: ' + dateTime() + '\n';
