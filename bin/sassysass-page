@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
-var fs      = require('fs'),
-  path      = require('path'),
-  prompt    = require('prompt'),
-  pkg       = require('../package.json'),
-  version   = pkg.version,
-  dir       = path.dirname(),
+var fs          = require('fs'),
+  path          = require('path'),
+  prompt        = require('prompt'),
+  pkg           = require('../package.json'),
+  version       = pkg.version,
+  dir           = path.dirname(),
   name,
-  filePath;
+  filePath,
+  modules,
+  moduleBlock   = '';
 
 prompt.message = 'SassySass'.magenta;
 prompt.delimiter = ' ';
@@ -21,11 +23,15 @@ prompt.get({
     },
     filePath : {
       description: 'Path to page directory?'
+    },
+    modules : {
+      description: 'Add modules to page?'
     }
   }
   }, function (err, result) {
   name = result.name.replace(/\s+/g, '-');
   filePath = result.filePath;
+  modules = result.modules;
   if(name === ''){
     name = 'page';
   }
@@ -33,6 +39,14 @@ prompt.get({
   if(filePath === ''){
     filePath = 'sass';
   }
+
+  if(modules !== ''){
+    modules = modules.split(', ');
+    for (var i = 0; i < modules.length; i++){
+      moduleBlock += '@import "modules/'+ modules[i] +'"; \n';
+    }
+  }
+
   // check if file already exists
   fs.exists(dir + '/'+ filePath + '/' + name + '.scss', function (exists) {
 
@@ -43,7 +57,7 @@ prompt.get({
           return console.log(err);
           console.log('Directory path might be wrong');
         }
-        var newFile = data.replace('@import "themes/red";', '').replace('@import "modules/header";', '').replace('@import "modules/footer";', '');
+        var newFile = data.replace('@import "themes/red";', '').replace('@import "modules/header";', '').replace('@import "modules/footer";', moduleBlock);
         write(dir + '/'+ filePath + '/' + name + '.scss', newFile);
       });
 

@@ -1,6 +1,6 @@
 {
   "name": "sassysass",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Sassy Sass is a CSS architecture scaffolding for Sass.",
   "main": "bin/sassysass",
   "preferGlobal": true,
@@ -27,7 +27,10 @@
     "smacss",
     "methodology"
   ],
-  "author": "Ryan Burgess @burgessdryan",
+  "authors": [
+    "Ryan Burgess @burgessdryan",
+    "Wai Lun Poon @monkeytypewritr"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ryanburgess/sassysass/issues"
