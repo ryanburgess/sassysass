@@ -4,12 +4,12 @@
 
 // ----------------------------------------------------------------------
 
-// example: @include translate(0);
+// example: @include translate(0, "z");
 
-@mixin translate($value) {
-  -webkit-transform: translatez($value);
-     -moz-transform: translatez($value);
-      -ms-transform: translatez($value);
-       -o-transform: translatez($value);
-          transform: translatez($value);
+@mixin translate($value, $axis) {
+  -webkit-transform: translate + $axis($value);
+     -moz-transform: translate + $axis($value);
+      -ms-transform: translate + $axis($value);
+       -o-transform: translate + $axis($value);
+          transform: translate + $axis($value);
 }

@@ -1,7 +1,7 @@
 # SassySass
 [![npm version](https://badge.fury.io/js/sassysass.svg)](http://badge.fury.io/js/sassysass)
 
-With a simple command add a well-structured architecture for your project's CSS. Based off the [SMACSS](https://smacss.com/) methodology, SassySass creates a simple, maintainable structure for your Sass files.
+With a simple command, add a well-structured architecture for your project's CSS. Based off the [SMACSS](https://smacss.com/) methodology, SassySass creates a simple, maintainable structure for your Sass files.
 
 ![SassySass in the terminal](https://raw.github.com/ryanburgess/sassysass/master/sassysass.gif)
 
@@ -50,6 +50,7 @@ SassySass Architecture
   The themes directory contains Sass partials that overwrite the styles in layout or modules.
 
 ## Release History
+* 1.0.9: [Issue 8](https://github.com/ryanburgess/sassysass/issues/8) Update translate mixin to use a axis variable.
 * 1.0.8: [Issue 2](https://github.com/ryanburgess/sassysass/issues/2) add import reference to root SCSS files when creating a new module.
 * 1.0.7: Add modules to a page when creating the page SCSS file.
 * 1.0.6: add description question for creating a module.
