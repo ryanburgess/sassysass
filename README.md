@@ -61,6 +61,12 @@ SassySass Architecture
 * 1.0.1: Update documentation.
 * 1.0.0: Initial release.
 
+## To Do
+* Write unit tests ([Issue #7](https://github.com/ryanburgess/sassysass/issues/7))
+* Create a logo 
+* Create a new design for [SassySass.com](http://sassysass.com)([Issue #6](https://github.com/ryanburgess/sassysass/issues/6))
+* Possibily add PostCSS / CSSnext ([Issue #8](https://github.com/ryanburgess/sassysass/issues/8))
+
 ## Contributing
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
