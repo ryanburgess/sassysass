@@ -28,14 +28,17 @@ prompt.get({
       description: 'Add modules to page?'
     }
   }
-  }, function (err, result) {
+}, function (err, result) {
   name = result.name.replace(/\s+/g, '-');
   filePath = result.filePath;
   modules = result.modules;
+
+  // if page name is left blank set to default page
   if(name === ''){
     name = 'page';
   }
 
+  // if file path is left blank set to default sass
   if(filePath === ''){
     filePath = 'sass';
   }
@@ -66,7 +69,7 @@ prompt.get({
         console.log('   \x1b[36mcreate\x1b[0m : ' + path);
       }
 
-
+      // make a directory function
       function mkdir(path, fn) {
         mkdirp(path, 0755, function(err){
           if (err) throw err;

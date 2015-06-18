@@ -42,14 +42,17 @@ prompt.get({
   moduleDesc = result.moduleDesc;
   pages = result.pages;
 
+  // if module name is left blank set to default module
   if(name === ''){
     name = 'module';
   }
 
+  // if file path is left blank set to default sass/modules
   if(modulePath === ''){
     modulePath = 'sass/modules';
   }
 
+  // add module to the list of pages provided
   if(pages !== ''){
     pages = pages.split(', ');
 
@@ -78,11 +81,13 @@ prompt.get({
     complete();
   }
 
+  // create new file
   function write(path, str, mode) {
     fs.writeFileSync(path, str, { mode: mode || 0666 });
     console.log('   \x1b[36mupdate\x1b[0m : ' + path);
   }
 
+  // complete the creation of the new module
   function complete(){
     newFile += '// File Name: _' + name + '.scss'+ '\n';
     newFile += '// Description: ' + moduleDesc + '\n';
