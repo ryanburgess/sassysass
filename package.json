@@ -1,6 +1,6 @@
 {
   "name": "sassysass",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Sassy Sass is a CSS architecture scaffolding for Sass.",
   "main": "bin/sassysass",
   "preferGlobal": true,
@@ -50,7 +50,11 @@
     "path": "^0.11.14",
     "prompt": "^0.2.14"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.0",
+    "jshint-stylish": "^2.0.0"
+  },
   "peerDependencies": {},
   "homepage": "https://github.com/ryanburgess/sassysass#readme"
 }

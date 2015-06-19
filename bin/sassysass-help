@@ -23,8 +23,8 @@ fs.readFile(path.join(dir + '/templates/json/help.json'), 'utf8', function (err,
   output += '\nCommands:\n';
 
   commands = content.commands;
-  
-  for (key in commands) {
+
+  for (var key in commands) {
     if (commands.hasOwnProperty(key)) {
       output += key + ' = ' + commands[key] + '\n';
     }

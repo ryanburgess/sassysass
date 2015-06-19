@@ -11,6 +11,21 @@ var fs          = require('fs'),
   modules,
   moduleBlock   = '';
 
+// create a new file
+function write(path, str, mode) {
+  fs.writeFileSync(path, str, { mode: mode || 0666 });
+  console.log('   \x1b[36mcreate\x1b[0m : ' + path);
+}
+
+// make a directory function
+function mkdir(path, fn) {
+  mkdirp(path, 0755, function(err){
+    if (err) throw err;
+    console.log('   \033[36mcreate\033[0m : ' + path);
+    return fn && fn();
+  });
+}
+
 prompt.message = 'SassySass'.magenta;
 prompt.delimiter = ' ';
 
@@ -57,26 +72,13 @@ prompt.get({
       // create page specific
       fs.readFile(path.join(__dirname, '../page.scss'), 'utf8', function (err,data) {
         if (err) {
-          return console.log(err);
           console.log('Directory path might be wrong');
+          return console.log(err);
         }
         var newFile = data.replace('@import "themes/red";', '').replace('@import "modules/header";', '').replace('@import "modules/footer";', moduleBlock);
         write(dir + '/'+ filePath + '/' + name + '.scss', newFile);
       });
 
-      function write(path, str, mode) {
-        fs.writeFileSync(path, str, { mode: mode || 0666 });
-        console.log('   \x1b[36mcreate\x1b[0m : ' + path);
-      }
-
-      // make a directory function
-      function mkdir(path, fn) {
-        mkdirp(path, 0755, function(err){
-          if (err) throw err;
-          console.log('   \033[36mcreate\033[0m : ' + path);
-          fn && fn();
-        });
-      }
       console.log('SassySass page ' + version);
     }else{
       console.log('The page ' + name + ' already exists');

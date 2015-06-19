@@ -16,6 +16,43 @@ var fs        = require('fs'),
   modulePath,
   moduleDesc;
 
+// create new file
+function write(path, str, mode) {
+  fs.writeFileSync(path, str, { mode: mode || 0666 });
+  console.log('   \x1b[36mupdate\x1b[0m : ' + path);
+}
+
+// complete the creation of the new module
+function complete(){
+  newFile += '// File Name: _' + name + '.scss'+ '\n';
+  newFile += '// Description: ' + moduleDesc + '\n';
+  newFile += '// Used by: '+ pageBlock +'\n';
+  newFile += '// Dependencies: \n';
+  newFile += '// Date created: ' + dateTime() + '\n';
+  newFile += '// ------------------------------------------------------------\n';
+
+  // check if file already exists
+  fs.exists(dir + '/'+ modulePath +'/_' + name + '.scss', function (exists) {
+    if(exists !== true){
+      writeFile();
+    }else{
+      console.log('The module ' + name + ' already exists');
+    }
+  });
+}
+
+function writeFile(){
+  fs.writeFile(dir + '/'+ modulePath +'/_' + name + '.scss', newFile, function(err) {
+    if(err) {
+      console.log(err);
+      console.log('Directory path might be wrong');
+    }else{
+      console.log('_' + name + '.scss was created');
+    }
+    console.log('SassySass module ' + version);
+  });
+}
+
 prompt.message = 'SassySass'.magenta;
 prompt.delimiter = ' ';
 
@@ -81,41 +118,6 @@ prompt.get({
     complete();
   }
 
-  // create new file
-  function write(path, str, mode) {
-    fs.writeFileSync(path, str, { mode: mode || 0666 });
-    console.log('   \x1b[36mupdate\x1b[0m : ' + path);
-  }
 
-  // complete the creation of the new module
-  function complete(){
-    newFile += '// File Name: _' + name + '.scss'+ '\n';
-    newFile += '// Description: ' + moduleDesc + '\n';
-    newFile += '// Used by: '+ pageBlock +'\n';
-    newFile += '// Dependencies: \n';
-    newFile += '// Date created: ' + dateTime() + '\n';
-    newFile += '// ------------------------------------------------------------\n';
-
-    // check if file already exists
-    fs.exists(dir + '/'+ modulePath +'/_' + name + '.scss', function (exists) {
-      if(exists !== true){
-        writeFile();
-      }else{
-        console.log('The module ' + name + ' already exists');
-      }
-    });
-  }
-
-  function writeFile(){
-    fs.writeFile(dir + '/'+ modulePath +'/_' + name + '.scss', newFile, function(err) {
-      if(err) {
-        console.log(err);
-        console.log('Directory path might be wrong');
-      }else{
-        console.log('_' + name + '.scss was created');
-      }
-      console.log('SassySass module ' + version);
-    });
-  }
   
 });
