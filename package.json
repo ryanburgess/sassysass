@@ -1,13 +1,14 @@
 {
   "name": "sassysass",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Sassy Sass is a CSS architecture scaffolding for Sass.",
   "main": "bin/sassysass",
   "preferGlobal": true,
   "bin": {
     "sassysass": "./bin/sassysass",
     "sassysass-page": "./bin/sassysass-page",
-    "sassysass-module": "./bin/sassysass-module"
+    "sassysass-module": "./bin/sassysass-module",
+    "sassysass-help": "./bin/sassysass-help"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -42,7 +43,9 @@
     "async": "^1.2.1",
     "fs-extra": "^0.16.3",
     "get-date": "^1.0.0",
+    "install": "^0.1.8",
     "mkdirp": "^0.5.0",
+    "npm": "^2.11.2",
     "path": "^0.11.14",
     "prompt": "^0.2.14"
   },

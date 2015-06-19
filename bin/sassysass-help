@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+var fs      = require('fs'),
+  path      = require('path'),
+  dir       = path.dirname(),
+  pkg       = require('../package.json'),
+  version   = pkg.version,
+  commands,
+  content,
+  output    = '';
+
+fs.readFile(path.join(dir + '/templates/json/help.json'), 'utf8', function (err, data) {
+  if (err) {
+    console.log('Error: ' + err);
+    return;
+  }
+
+  content = JSON.parse(data);
+
+  // create output
+  output += '\nSassy Sass ' + version + '\n';
+  output += '\nUsage: ' + content.usage + '\n';
+  output += '\nCommands:\n';
+
+  commands = content.commands;
+  
+  for (key in commands) {
+    if (commands.hasOwnProperty(key)) {
+      output += key + ' = ' + commands[key] + '\n';
+    }
+  }  
+  console.log(output);
+});
