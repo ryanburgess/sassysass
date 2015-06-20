@@ -52,6 +52,7 @@ SassySass Architecture
   The themes directory contains Sass partials that overwrite the styles in layout or modules.
 
 ## Release History
+* 1.1.2: [Issue 12](https://github.com/ryanburgess/sassysass/issues/12) Fix help command to pull help.json.
 * 1.1.1: Clean up command files and add Gulp for JSHint.
 * 1.1.0: Add help command.
 * 1.0.9: [Issue 8](https://github.com/ryanburgess/sassysass/issues/8) Update translate mixin to use a axis variable.

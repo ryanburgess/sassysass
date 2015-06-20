@@ -4,25 +4,16 @@ var fs      = require('fs'),
   path      = require('path'),
   dir       = path.dirname(),
   pkg       = require('../package.json'),
+  help      = require('../templates/json/help.json'),
   version   = pkg.version,
   commands,
-  content,
   output    = '';
 
-fs.readFile(path.join(dir + '/templates/json/help.json'), 'utf8', function (err, data) {
-  if (err) {
-    console.log('Error: ' + err);
-    return;
-  }
-
-  content = JSON.parse(data);
-
-  // create output
   output += '\nSassy Sass ' + version + '\n';
-  output += '\nUsage: ' + content.usage + '\n';
+  output += '\nUsage: ' + help.usage + '\n';
   output += '\nCommands:\n';
 
-  commands = content.commands;
+  commands = help.commands;
 
   for (var key in commands) {
     if (commands.hasOwnProperty(key)) {
@@ -30,4 +21,3 @@ fs.readFile(path.join(dir + '/templates/json/help.json'), 'utf8', function (err,
     }
   }  
   console.log(output);
-});
