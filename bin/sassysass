@@ -49,6 +49,7 @@ fs.exists(dir + '/sass', function (exists) {
       if (err) {
         return console.log(err);
       }
+      var newFile = data.replace('@import "themes/red";', '').replace('@import "modules/header";', '').replace('@import "modules/footer";', '');
       write(dir + '/sass/page.scss', data);
     });
 
