@@ -1,7 +1,7 @@
 # Sassy Sass
 [![npm version](https://badge.fury.io/js/sassysass.svg)](http://badge.fury.io/js/sassysass)
 
-<img height="300" src="http://sassysass.com/sassy-sass.png">
+<img height="300" src="http://sassysass.com/sassy-sass.png" alt="Sassy Sass Logo">
 
 Sassy Sass is a scaffolding tool to help you organize your project’s Sass structure.
 
