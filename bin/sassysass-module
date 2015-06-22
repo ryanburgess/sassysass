@@ -13,7 +13,7 @@ var fs        = require('fs'),
   pages,
   name,
   overwrite,
-  modulePath,
+  modulePath  = 'sass/modules',
   moduleDesc;
 
 // create new file
@@ -61,7 +61,11 @@ prompt.start();
 prompt.get({
   properties: {
     name : {
-      description: 'What is the name of the module?'
+      description: 'What is the name of the module?',
+      conform: function(moduleName){
+        return !fs.existsSync(dir + '/'+ modulePath +'/_' + moduleName + '.scss');
+      },
+      message : "Module already exists, please choose another name"
     },
     modulePath : {
       description: 'Path to modules directory?'
@@ -75,7 +79,6 @@ prompt.get({
   }
 }, function (err, result) {
   name = result.name.replace(/\s+/g, '-');
-  modulePath = result.modulePath;
   moduleDesc = result.moduleDesc;
   pages = result.pages;
 
@@ -85,8 +88,8 @@ prompt.get({
   }
 
   // if file path is left blank set to default sass/modules
-  if(modulePath === ''){
-    modulePath = 'sass/modules';
+  if(result.modulePath !== ''){
+    modulePath = result.modulePath;
   }
 
   // add module to the list of pages provided

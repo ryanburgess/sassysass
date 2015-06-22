@@ -7,7 +7,7 @@ var fs          = require('fs'),
   version       = pkg.version,
   dir           = path.dirname(),
   name,
-  filePath,
+  filePath      = 'sass',
   modules,
   moduleBlock   = '';
 
@@ -34,7 +34,11 @@ prompt.start();
 prompt.get({
   properties: {
     name : {
-      description: 'What is the name of the page?'
+      description: 'What is the name of the page?',
+      conform: function(name){
+        return !fs.existsSync(dir + '/'+ filePath + '/' + name + '.scss');
+      },
+      message : "Page already exists, please choose another name"      
     },
     filePath : {
       description: 'Path to page directory?'
@@ -45,7 +49,6 @@ prompt.get({
   }
 }, function (err, result) {
   name = result.name.replace(/\s+/g, '-');
-  filePath = result.filePath;
   modules = result.modules;
 
   // if page name is left blank set to default page
@@ -53,10 +56,10 @@ prompt.get({
     name = 'page';
   }
 
-  // if file path is left blank set to default sass
-  if(filePath === ''){
-    filePath = 'sass';
-  }
+  // if file path is left blank leave to default sass
+  if(result.filePath !== ''){
+    filePath = result.filePath;
+  }  
 
   if(modules !== ''){
     modules = modules.split(', ');
