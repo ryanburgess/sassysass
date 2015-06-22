@@ -28,9 +28,11 @@ rl.on('line', function(line) {
 
 rl.on('close',function() {
   mixinSection.push('*Add New Section*');
-  mixinSection = mixinSection.map(function(section,index){return index+'. '+section});
+  mixinSection = mixinSection.map(function(section,index){
+    return index+'. '+section;
+  });
   startPrompt();
-})
+});
 
 function startPrompt(){
   
@@ -46,7 +48,7 @@ function startPrompt(){
       }
     }
   }, function (err, result) {
-    console.log(result)
+    console.log(result);
   });
 
 }
