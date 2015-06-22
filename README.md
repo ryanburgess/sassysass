@@ -54,6 +54,7 @@ SassySass Architecture
   The themes directory contains Sass partials that overwrite the styles in layout or modules.
 
 ## Release History
+* 1.1.5: [Issue 11](https://github.com/ryanburgess/sassysass/issues/11) Option to overwrite module or page.
 * 1.1.4: Small fix in the sassysass command.
 * 1.1.3: Remove header, footer, red example modules because people were getting confused when they were in the sassysass build.
 * 1.1.2: [Issue 12](https://github.com/ryanburgess/sassysass/issues/12) Fix help command to pull help.json.
