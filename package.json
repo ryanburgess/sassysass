@@ -54,6 +54,7 @@
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-nodeunit": "^0.4.1",
+    "grunt-jsonlint": "^1.0.4",
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.0",
     "gulp-jsonlint": "^1.1.0",
