@@ -11,7 +11,7 @@
     "sassysass-help": "./bin/sassysass-help"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -51,13 +51,10 @@
     "prompt": "^0.2.14"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-nodeunit": "^0.4.1",
-    "grunt-jsonlint": "^1.0.4",
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.0",
     "gulp-jsonlint": "^1.1.0",
+    "gulp-nodeunit": "0.0.5",
     "jshint-stylish": "^2.0.0"
   },
   "peerDependencies": {},
