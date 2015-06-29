@@ -8,6 +8,7 @@ var fs        = require('fs'),
   version     = pkg.version,
   dir         = path.dirname(),
   dateTime    = require('get-date'),
+  write       = require('../lib/write'),
   newFile     = '',
   pageBlock   = '',
   pages,
@@ -15,12 +16,6 @@ var fs        = require('fs'),
   overwrite,
   modulePath  = 'sass/modules',
   moduleDesc;
-
-// create new file
-function write(path, str, mode) {
-  fs.writeFileSync(path, str, { mode: mode || 0666 });
-  console.log('   \x1b[36mupdate\x1b[0m : ' + path);
-}
 
 // complete the creation of the new module
 function complete(){
@@ -119,8 +114,5 @@ prompt.get({
     }); 
   }else{
     complete();
-  }
-
-
-  
+  }  
 });
