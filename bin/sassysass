@@ -2,6 +2,7 @@
 var argument    = process.argv[2],
   createPage    = require('../lib/commands/page'),
   createModule  = require('../lib/commands/module'),
+  createMixin   = require('../lib/commands/mixin'),
   install       = require('../lib/commands/install'),
   help          = require('../lib/commands/help');
 
@@ -14,6 +15,9 @@ switch (true) {
     break;
   case (argument === 'module'):
     createModule();
+    break;
+  case (argument === 'mixin'):
+    createMixin();
     break;
   case (argument === 'help'):
     help();
