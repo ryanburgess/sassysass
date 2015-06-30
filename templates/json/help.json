@@ -1,8 +1,8 @@
 {
-  "usage": "sassysass-<args>",
+  "usage": "sassysass <args>",
   "commands":{
-    "sassysass": "Starts a new project",
-    "sassysass-module": "Creates a new Sass module",
-    "sassysass-page": "Creates a new Sass page"
+    "sassysass install": "Starts a new project",
+    "sassysass module": "Creates a new Sass module",
+    "sassysass page": "Creates a new Sass page"
   }
 }

@@ -1,5 +1,6 @@
 # Release History
 
+* 1.1.6: Use one command passing arguements. Example: sassysass install, sassysass page, sassysass help
 * 1.1.5: [Issue 11](https://github.com/ryanburgess/sassysass/issues/11) Option to overwrite module or page.
 * 1.1.4: Small fix in the sassysass command.
 * 1.1.3: Remove header, footer, red example modules because people were getting confused when they were in the sassysass build.

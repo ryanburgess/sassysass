@@ -15,11 +15,11 @@ With a simple command, add a well-structured architecture for your project's CSS
 npm install sassysass -g
 ```
 ## Use
-Run ```sassysass``` in your project directory.
+Run ```sassysass install``` in your project directory.
 
-To create new individual Sass files run ```sassysass-page```. If the name isn't set the file will be named 'page' and if the path isn't set it assumes the directory is 'sass'.
+To create new individual Sass files run ```sassysass page```. If the name isn't set the file will be named 'page' and if the path isn't set it assumes the directory is 'sass'.
 
-To create new Sass module run ```sassysass-module```. If the name isn't set the file will be named 'module' and if the path isn't set it assumes the directory is 'sass/modules'.
+To create new Sass module run ```sassysass module```. If the name isn't set the file will be named 'module' and if the path isn't set it assumes the directory is 'sass/modules'.
 
 SassySass Architecture
 ----------
