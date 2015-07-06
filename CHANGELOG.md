@@ -1,5 +1,6 @@
 # Release History
 
+* 1.1.8: Add unused command to show unused files (modules, themes, layout)
 * 1.1.7: Add show command to show available files (modules, themes, pages, mixins)
 * 1.1.6: Use one command passing arguements. Example: sassysass install, sassysass page, sassysass help
 * 1.1.5: [Issue 11](https://github.com/ryanburgess/sassysass/issues/11) Option to overwrite module or page.

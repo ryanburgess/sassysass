@@ -4,6 +4,7 @@
     "sassysass install": "Starts a new project",
     "sassysass module": "Creates a new Sass module",
     "sassysass page": "Creates a new Sass page",
-    "sassysass show": "Show current modules, pages, or mixins"
+    "sassysass show": "Show current modules, pages, or mixins",
+    "sassysass unused": "Show unused modules, layout, or themes"
   }
 }
