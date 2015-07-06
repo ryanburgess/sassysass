@@ -4,6 +4,7 @@ var argument    = process.argv[2],
   createModule  = require('../lib/commands/module'),
   createMixin   = require('../lib/commands/mixin'),
   install       = require('../lib/commands/install'),
+  show          = require('../lib/commands/show'),
   help          = require('../lib/commands/help');
 
 switch (true) {
@@ -21,6 +22,9 @@ switch (true) {
     break;
   case (argument === 'help'):
     help();
+    break;
+  case (argument === 'show'):
+    show(process.argv[3]);
     break;
   default:
     help();
