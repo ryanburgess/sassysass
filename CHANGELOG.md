@@ -1,5 +1,6 @@
 # Release History
 
+* 1.2.0: Add max-width breakpoint to mixins directory.
 * 1.1.9: Prompt user if unused files should be deleted.
 * 1.1.8: Add unused command to show unused files (modules, themes, layout)
 * 1.1.7: Add show command to show available files (modules, themes, pages, mixins)
