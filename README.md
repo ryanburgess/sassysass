@@ -21,7 +21,7 @@ To create new individual Sass files run ```sassysass page```. If the name isn't 
 
 To create new Sass module run ```sassysass module```. If the name isn't set the file will be named 'module' and if the path isn't set it assumes the directory is 'sass/modules'.
 
-SassySass Architecture
+Sassy Sass Architecture
 ----------
 1.  Utils
   The utils directory contains Sass partials like:
