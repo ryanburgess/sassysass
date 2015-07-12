@@ -1,5 +1,5 @@
 # Sassy Sass
-[![npm version](https://badge.fury.io/js/sassysass.svg)](http://badge.fury.io/js/sassysass) [![Build Status](https://travis-ci.org/ryanburgess/sassysass.svg?branch=master)](https://travis-ci.org/ryanburgess/sassysass)
+[![npm version](https://badge.fury.io/js/sassysass.svg)](http://badge.fury.io/js/sassysass) [![npm](https://img.shields.io/npm/dm/sassysass.svg)](https://github.com/ryanburgess/sassysass) [![Build Status](https://travis-ci.org/ryanburgess/sassysass.svg?branch=master)](https://travis-ci.org/ryanburgess/sassysass)
 
 <img height="300" src="http://sassysass.com/sassy-sass.png" alt="Sassy Sass Logo">
 
