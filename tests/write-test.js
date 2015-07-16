@@ -1,10 +1,8 @@
-// var fs    = require('fs'),
-//   path    = require('path'),
-//   dir     = path.dirname(),
-//   write   = require('../lib/write');
+'use strict';
+var test = require('tape');
+var write = require('../lib/write');
 
-// exports.writeTest = function(test){
-//   var writeFunction = write(dir + '/sass/test.scss', 'test');
-//   test.notEqual(writeFunction, undefined);
-//   test.done();
-// };
+test('Test write function', function (t) {
+  t.notEqual(write('test', 'test'), undefined, 'Pass - Write function working');
+  t.end();
+});

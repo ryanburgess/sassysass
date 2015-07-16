@@ -52,7 +52,8 @@
     "gulp-jshint": "^1.11.0",
     "gulp-jsonlint": "^1.1.0",
     "gulp-nodeunit": "0.0.5",
-    "jshint-stylish": "^2.0.0"
+    "jshint-stylish": "^2.0.0",
+    "tape": "^4.0.0"
   },
   "peerDependencies": {},
   "homepage": "https://github.com/ryanburgess/sassysass#readme"
