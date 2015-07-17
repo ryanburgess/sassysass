@@ -1,5 +1,6 @@
 # Release History
 
+* 1.2.2: Fixed Retina mixin.
 * 1.2.1: Remove old bin commands.
 * 1.2.0: Add max-width breakpoint to mixins directory.
 * 1.1.9: Prompt user if unused files should be deleted.
