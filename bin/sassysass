@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var argument    = process.argv[2],
+  argumentSec   = process.argv[3],
   createPage    = require('../lib/commands/page'),
   createModule  = require('../lib/commands/module'),
   createMixin   = require('../lib/commands/mixin'),
@@ -25,10 +26,10 @@ switch (true) {
     help();
     break;
   case (argument === 'show'):
-    show(process.argv[3]);
+    show(argumentSec);
     break;
   case (argument === 'unused'):
-    unused(process.argv[3]);
+    unused(argumentSec);
     break;
   default:
     help();
