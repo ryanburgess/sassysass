@@ -1,6 +1,6 @@
 {
   "name": "sassysass",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Sassy Sass is a CSS architecture scaffolding for Sass.",
   "main": "bin/sassysass",
   "preferGlobal": true,
