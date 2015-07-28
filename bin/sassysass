@@ -7,7 +7,8 @@ var argument    = process.argv[2],
   install       = require('../lib/commands/install'),
   show          = require('../lib/commands/show'),
   unused        = require('../lib/commands/unused'),
-  help          = require('../lib/commands/help');
+  help          = require('../lib/commands/help'),
+  explore       = require('../lib/commands/explore');
 
 switch (true) {
   case (argument === 'install'):
@@ -30,6 +31,9 @@ switch (true) {
     break;
   case (argument === 'unused'):
     unused(argumentSec);
+    break;
+  case (argument === 'explore'):
+    explore();
     break;
   default:
     help();
