@@ -8,3 +8,4 @@ Feel free to contribute :)
 * Create themes and boilerplate modules
 * Create way to install new modules, mixins or themes
 * Add support for Font Awesome
+* Use something like [mdcss](https://github.com/jonathantneal/mdcss-theme-github) to create an automated CSS style guide
