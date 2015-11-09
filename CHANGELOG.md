@@ -1,5 +1,6 @@
 # Release History
 
+* 1.2.4: [Issue 18](https://github.com/ryanburgess/sassysass/issues/18) Fixed the sassysass module command.
 * 1.2.3: Don't ask to delete unused files if 0 are returned.
 * 1.2.2: Fixed Retina mixin.
 * 1.2.1: Remove old bin commands.
