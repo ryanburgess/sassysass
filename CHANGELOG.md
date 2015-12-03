@@ -1,5 +1,6 @@
 # Release History
 
+* 1.2.7: Merge pull request for new mixins. Change page.scss to style.scss.
 * 1.2.6: Update dependencies.
 * 1.2.5: Use request on commands.
 * 1.2.4: [Issue 18](https://github.com/ryanburgess/sassysass/issues/18) Fixed the sassysass module command.
