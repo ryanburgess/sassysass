@@ -1,0 +1,16 @@
+{
+  "title":"SassySass",
+  "questions": {
+      "pathToModule": "Path to modules directory?",
+      "moduleDesc": "What is this module used for?",
+      "moduleAddToPage": "What pages do you want to add this module to?",
+      "pathToPage": "Path to page directory?",
+      "addModules": "Add modules to page?",
+      "mixinInstall": "What mixin would you like to install?"
+    },
+    "errors": {
+      "directoryPath": "Directory path might be wrong",
+      "moduleExists": "Module already exists, please choose another name",
+      "pageExists": "Page already exists, please choose another name"
+    }
+}
