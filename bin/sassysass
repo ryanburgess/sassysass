@@ -1,41 +1,42 @@
 #!/usr/bin/env node
-var argument    = process.argv[2],
-  argumentSec   = process.argv[3],
-  createPage    = require('../lib/commands/page'),
-  createModule  = require('../lib/commands/module'),
-  createMixin   = require('../lib/commands/mixin'),
-  install       = require('../lib/commands/install'),
-  show          = require('../lib/commands/show'),
-  unused        = require('../lib/commands/unused'),
-  help          = require('../lib/commands/help'),
-  explore       = require('../lib/commands/explore');
+var argument = process.argv[2];
+var argumentSec = process.argv[3];
+
+var createPage = require('../lib/commands/page');
+var createModule = require('../lib/commands/module');
+var createMixin = require('../lib/commands/mixin');
+var install = require('../lib/commands/install');
+var show = require('../lib/commands/show');
+var unused = require('../lib/commands/unused');
+var help = require('../lib/commands/help');
+var explore = require('../lib/commands/explore');
 
 switch (true) {
   case (argument === 'install'):
     install();
-    break;
+  break;
   case (argument === 'page'):
     createPage();
-    break;
+  break;
   case (argument === 'module'):
     createModule();
-    break;
+  break;
   case (argument === 'mixin'):
     createMixin();
-    break;
+  break;
   case (argument === 'help'):
     help();
-    break;
+  break;
   case (argument === 'show'):
     show(argumentSec);
-    break;
+  break;
   case (argument === 'unused'):
     unused(argumentSec);
-    break;
+  break;
   case (argument === 'explore'):
     explore();
-    break;
+  break;
   default:
     help();
-    break;
+  break;
 }
