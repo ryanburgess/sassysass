@@ -1,18 +1,9 @@
 var gulp        = require('gulp'),
   jsonlint      = require("gulp-jsonlint"),
-  jshint        = require('gulp-jshint'),
   nodeunit      = require('gulp-nodeunit'),
   jshintStyle   = require('jshint-stylish'),
   eslint        = require('gulp-eslint'),
   path          = require('path');
-
-// JS Hint
-gulp.task('jshint', function() {
-  return gulp.src(['./bin/*', './lib/*'])
-    .pipe(jshint())
-    .pipe(jshint.reporter(jshintStyle))
-    .pipe(jshint.reporter('fail'));
-});
 
 // ESLint
 gulp.task('lint', function () {
@@ -31,7 +22,7 @@ gulp.task('jsonlint', function() {
 
 // watch tasks
 gulp.task('watch', function() {
-  gulp.watch(['bin/*', 'lib/**/*'], ['jshint', 'lint']);
+  gulp.watch(['bin/*', 'lib/**/*'], ['lint']);
   gulp.watch(['./templates/json/*.json', 'package.json'], ['jsonlint']);
 });
 
@@ -46,5 +37,5 @@ gulp.task('nodeunit', function () {
     }));
 });
 
-gulp.task('test', ['lint', 'jsonlint', 'jshint', 'nodeunit']);
+gulp.task('test', ['lint', 'jsonlint', 'nodeunit']);
 gulp.task('default', ['watch']);
