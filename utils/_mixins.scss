@@ -1,7 +1,4 @@
-//------ SASS Useful Mixins ---------------------------------------------
-
-// by Ryan Burgess
-// https://github.com/ryanburgess/SASS-Useful-Mixins
+// SassySass ------------------------------------------------------------
 
 // ----------------------------------------------------------------------
 
@@ -58,7 +55,7 @@
 
 // ----------------------------------------------------------------------
 @import "mixins/breakpoint";
-@import "mixins/betweenbreakpoints"
+@import "mixins/betweenbreakpoints";
 @import "mixins/min-breakpoint";
 @import "mixins/retina";
 
