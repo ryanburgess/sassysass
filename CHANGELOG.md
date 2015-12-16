@@ -1,5 +1,7 @@
 # Release History
 
+* 1.2.9: Improvements to file structure.
+* 1.2.8: Bug fixes.
 * 1.2.7: Merge pull request for new mixins. Change page.scss to style.scss.
 * 1.2.6: Update dependencies.
 * 1.2.5: Use request on commands.
