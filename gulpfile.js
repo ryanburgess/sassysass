@@ -15,13 +15,14 @@ gulp.task('lint', function () {
 
 // JSON Lint
 gulp.task('jsonlint', function() {
-  return gulp.src(['./templates/json/*.json', 'package.json'])
+  return gulp.src(['./templates/json/*.json', './*.json'])
     .pipe(jsonlint())
     .pipe(jsonlint.reporter(jshintStyle));
 });
 
 // watch tasks
 gulp.task('watch', function() {
+  gulp.watch(['./*.json', './templates/json/*.json'], ['jsonlint']);
   gulp.watch(['bin/*', 'lib/**/*'], ['lint']);
   gulp.watch(['./templates/json/*.json', 'package.json'], ['jsonlint']);
 });
