@@ -7,7 +7,8 @@
       "pathToPage": "Path to page directory?",
       "addModules": "Add modules to page?",
       "mixinInstall": "What mixin would you like to install?",
-      "namePage": "What is the name of the page?"
+      "namePage": "What is the name of the page?",
+      "nameModule": "What is the name of the module?"
     },
     "errors": {
       "directoryPath": "Directory path might be wrong",
