@@ -1,0 +1,26 @@
+{
+  "title":"SassySass",
+  "questions": {
+      "pathToModule": "Path to modules directory?",
+      "moduleDesc": "What is this module used for?",
+      "moduleAddToPage": "What pages do you want to add this module to?",
+      "pathToPage": "Path to page directory?",
+      "addModules": "Add modules to page?",
+      "mixinInstall": "What mixin would you like to install?",
+      "namePage": "What is the name of the page?",
+      "nameModule": "What is the name of the module?"
+    },
+    "errors": {
+      "directoryPath": "Directory path might be wrong",
+      "moduleExists": "Module already exists, please choose another name",
+      "pageExists": "Page already exists, please choose another name",
+      "showNotCommand": "Not a command. Try sassysass show <modules, themes, layout, mixins>",
+      "alreadyExists": "already exists"
+    },
+    "messages": {
+      "showThereCurrently": "Sassy Sass: there is currently",
+      "pageVersion": "SassySass page v",
+      "moduleVersion": "SassySass module v",
+      "wasCreated": ".scss was created"
+    }
+}
