@@ -1,9 +1,10 @@
 {
-  "usage": "sassysass <args>",
+  "usage": "SassySass <args>",
   "commands":{
-    "sassysass install": "Starts a new project",
-    "sassysass module": "Creates a new Sass module",
-    "sassysass page": "Creates a new Sass page",
+    "sassysass install": "Starts a new SassySass project",
+    "sassysass module": "Creates a new SassySass module",
+    "sassysass theme": "Creates a new SassySass theme",
+    "sassysass page": "Creates a new SassySass page",
     "sassysass show": "Show current modules, pages, or mixins",
     "sassysass unused": "Show unused modules, layout, or themes"
   }

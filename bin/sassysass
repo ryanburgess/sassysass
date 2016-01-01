@@ -4,6 +4,7 @@ var argumentSec = process.argv[3];
 
 var createPage = require('../lib/commands/page');
 var createModule = require('../lib/commands/module');
+var createTheme = require('../lib/commands/theme');
 var createMixin = require('../lib/commands/mixin');
 var install = require('../lib/commands/install');
 var show = require('../lib/commands/show');
@@ -20,6 +21,9 @@ switch (true) {
   break;
   case (argument === 'module'):
     createModule();
+  break;
+  case (argument === 'theme'):
+    createTheme();
   break;
   case (argument === 'mixin'):
     createMixin();

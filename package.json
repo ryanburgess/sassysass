@@ -1,6 +1,6 @@
 {
   "name": "sassysass",
-  "version": "1.2.9",
+  "version": "1.3.0",
   "description": "Sassy Sass is a CSS architecture scaffolding for Sass.",
   "main": "bin/sassysass",
   "preferGlobal": true,
@@ -45,6 +45,7 @@
     "mkdirp": "^0.5.1",
     "npm": "^2.14.15",
     "path": "^0.11.14",
+    "prepend-file": "^1.3.0",
     "prompt": "^0.2.14",
     "request": "^2.67.0"
   },
@@ -52,7 +53,6 @@
     "babel-eslint": "^5.0.0-beta4",
     "eslint": "^1.10.3",
     "eslint-plugin-babel": "^3.0.0",
-    "eslint-plugin-react": "^3.11.3",
     "gulp": "^3.9.0",
     "gulp-eslint": "^1.1.1",
     "gulp-jsonlint": "^1.1.1",
