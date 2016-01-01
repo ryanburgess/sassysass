@@ -1,0 +1,10 @@
+// ----------------------------------------------------------------------
+
+  // Media Query Between Breakpoint - min-width -> max-width
+
+// ----------------------------------------------------------------------
+
+@mixin betweenbreakpoints($sizeStart,$sizeEnd) {
+	@media only screen and (min-width: $sizeStart + 1px) and (max-width:$sizeEnd - 1px)
+	{ @content; }
+}

@@ -5,6 +5,5 @@
 .sass-cache
 *.log
 node_modules/
-sass/
 npm-debug.log
 test-output/

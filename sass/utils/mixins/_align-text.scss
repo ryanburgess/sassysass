@@ -1,0 +1,10 @@
+// ----------------------------------------------------------------------
+
+  // Align inline and inline-block child elements
+   // example: @include align(center);
+
+// ----------------------------------------------------------------------
+
+@mixin align($direction) {
+	text-align:$direction;
+}

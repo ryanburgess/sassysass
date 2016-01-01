@@ -1,0 +1,13 @@
+// ----------------------------------------------------------------------
+
+  // Hide Text
+
+// ----------------------------------------------------------------------
+
+// example: @include hide-text();
+
+@mixin hide-text() {
+  position: relative;
+  text-indent: -99999px;
+  display: inline-block;
+}

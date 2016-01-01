@@ -1,0 +1,13 @@
+// ----------------------------------------------------------------------
+
+  // Inner Shadow
+
+// ----------------------------------------------------------------------
+
+// example: @include inner-shadow(1px, 2px, 2px, #000);
+
+@mixin inner-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
+  -webkit-box-shadow: inset $hoff $voff $blur $color;
+     -moz-box-shadow: inset $hoff $voff $blur $color;
+      box-shadow: inset $hoff $voff $blur $color;
+}

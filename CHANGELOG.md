@@ -1,5 +1,6 @@
 # Release History
 
+* 1.3.1: Bug fixes.
 * 1.3.0: Add command to create a new theme.
 * 1.2.9: Improvements to file structure.
 * 1.2.8: Bug fixes.
