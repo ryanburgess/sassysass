@@ -1,9 +1,9 @@
-var gulp        = require('gulp'),
-  jsonlint      = require("gulp-jsonlint"),
-  nodeunit      = require('gulp-nodeunit'),
-  jshintStyle   = require('jshint-stylish'),
-  eslint        = require('gulp-eslint'),
-  path          = require('path');
+const gulp = require('gulp');
+const jsonlint = require('gulp-jsonlint');
+const nodeunit = require('gulp-nodeunit');
+const jshintStyle = require('jshint-stylish');
+const eslint = require('gulp-eslint');
+const path = require('path');
 
 // ESLint
 gulp.task('lint', function () {
