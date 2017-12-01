@@ -25,8 +25,8 @@ Sassy Sass Architecture
 ----------
 1.  Utils
   The utils directory contains Sass partials like:
-  * Vendor dependancies (Compass, Foundation)
-  * Authored dependancies (Mixins, Extends)
+  * Vendor dependencies (Compass, Foundation)
+  * Authored dependencies (Mixins, Extends)
 
 2.  Base
 
